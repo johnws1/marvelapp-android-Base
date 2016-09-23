@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.frameworksystem.marvelapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".MarvelApp"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/SplashThemes"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.EventDetailActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.ComicActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.ComicDetailActivity"
+            android:parentActivityName=".ui.activities.MainActivity">
+        </activity>
+
+        <activity
+            android:name=".ui.activities.CharacterDetailActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e0c798c86d6ba89f39e63b7907dbe02c34f45fd3" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
